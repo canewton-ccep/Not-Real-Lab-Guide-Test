@@ -1,0 +1,31 @@
+/* Lab guide custom styling */
+
+/* Numbered task badge used in lab page headers */
+.task-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 1rem;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* Screenshots: give them a border so they read as UI, not page content */
+.md-typeset img {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+}
+
+/* Make tables full width and readable */
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+}
+
+/* Tighter checklists for the "verify your work" blocks */
+.md-typeset .task-list-item {
+  margin-bottom: 0.2rem;
+}
