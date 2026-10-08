@@ -5,7 +5,7 @@ An [MkDocs](https://www.mkdocs.org/) site, using the
 hands-on labs teaching customers and users how to configure and use cloud
 collaboration solutions.
 
-**Live site:** https://OWNER.github.io/REPO/ *(update after your first deploy)*
+**Live site:** https://canewton-ccep.github.io/Not-Real-Lab-Guide-Test/
 
 ## Contents
 
@@ -43,26 +43,25 @@ mkdocs build --strict
 what CI runs, so run it before you open a pull request. Output lands in `site/`, which
 is gitignored.
 
-## First-time setup for your repository
+## Publishing
 
-1. **Create the GitHub repository** and push this directory to the `main` branch.
+This repository is already wired up: pushing to `main` runs the
+`Build and deploy lab guide` workflow, which builds the site and publishes it to
+GitHub Pages. Watch it under the **Actions** tab.
 
-2. **Replace the placeholders.** Search for `OWNER` and `REPO` in `mkdocs.yml` and this
-   README and substitute your GitHub organization and repository names. `site_url` must
-   end with a trailing slash:
+**Settings > Pages > Source** must be set to **GitHub Actions** — the workflow uses the
+Pages deployment API rather than a `gh-pages` branch.
 
-   ```yaml
-   site_url: https://my-org.github.io/lab-guides/
-   repo_url: https://github.com/my-org/lab-guides
-   repo_name: my-org/lab-guides
-   ```
+### Forking this for another site
 
-3. **Enable GitHub Pages.** In the repository, go to **Settings > Pages** and set
-   **Source** to **GitHub Actions**. This is required — the workflow uses the Pages
-   deployment API, not a `gh-pages` branch.
+If you reuse this scaffold elsewhere, update these three keys in `mkdocs.yml` to match
+the new repository. `site_url` must end with a trailing slash:
 
-4. **Push to `main`.** The `Build and deploy lab guide` workflow runs and publishes the
-   site. Watch it under the **Actions** tab.
+```yaml
+site_url: https://my-org.github.io/lab-guides/
+repo_url: https://github.com/my-org/lab-guides
+repo_name: my-org/lab-guides
+```
 
 ### Private repositories
 

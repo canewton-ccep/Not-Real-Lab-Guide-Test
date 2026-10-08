@@ -9,9 +9,9 @@ site_description: Hands-on, step-by-step labs for configuring and using cloud co
 site_author: Lab Content Team
 
 # Change these two to match your GitHub repo before the first deploy.
-site_url: https://OWNER.github.io/REPO/
-repo_url: https://github.com/OWNER/REPO
-repo_name: OWNER/REPO
+site_url: https://canewton-ccep.github.io/Not-Real-Lab-Guide-Test/
+repo_url: https://github.com/canewton-ccep/Not-Real-Lab-Guide-Test
+repo_name: canewton-ccep/Not-Real-Lab-Guide-Test
 edit_uri: edit/main/docs/
 
 copyright: Copyright &copy; Cisco Systems, Inc. For training use only.
@@ -111,4 +111,4 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/OWNER/REPO
+      link: https://github.com/canewton-ccep/Not-Real-Lab-Guide-Test
