@@ -14,7 +14,7 @@ repo_url: https://github.com/canewton-ccep/Not-Real-Lab-Guide-Test
 repo_name: canewton-ccep/Not-Real-Lab-Guide-Test
 edit_uri: edit/main/docs/
 
-copyright: Copyright &copy; Cisco Systems, Inc. For training use only.
+copyright: Test repository only - not for any use. Released under the MIT License.
 
 theme:
   name: material
