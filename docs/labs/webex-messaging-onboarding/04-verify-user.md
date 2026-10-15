@@ -12,65 +12,75 @@ debugging it after the user reports "Webex doesn't work."
 
 Go to **Management > Users**.
 
-In the search box above the table, type part of `<new-user-email>` or
-`<new-user-first>`. The table filters as you type.
+The new user is in the table. If the list is long, type part of `<new-user-email>` or
+`<new-user-first>` in the **Search by display name, email…** box above the table.
 
 !!! tip
-    If the user does not appear, clear any active filters on the table (status,
-    license, administrator role) — a filter left over from earlier browsing is the
+    If the user does not appear, clear any active **Filter by** buttons (Active,
+    Pending, Suspended, Transient) — a filter left over from earlier browsing is the
     usual cause.
 
 ### Step 2 — Read the status
 
 Look at the **Status** column for your new user. It reads **Pending**.
 
+![User list showing the new user with Pending status, the Resend Invitation envelope icon on the row, and the "Send activation emails to users" banner](../../assets/images/webex-messaging-onboarding/04-user-pending.png)
+
+You may also see a blue banner at the top of the page: *"Send activation emails to
+users. They still need to set up their accounts."* The envelope icon at the right of the
+user's row is **Resend Invitation**.
+
 !!! note "What Pending means"
     **Pending** means the account exists in your organization but the person has never
     signed in. It is the expected state for a brand-new user. It becomes **Active**
     after the first successful sign-in, which you will do in Task 5.
 
-    A Pending user is not a failure, and it is not consuming a license yet.
-
 ### Step 3 — Open the user's profile
 
-Click the user's row.
+Click the user's name.
 
-A detail panel or page opens, showing tabs or sections such as **Profile**,
-**Services** (or **Licenses**), **Devices**, and **Meetings**.
+The user's profile opens as a full page. The header shows the name, status, and email
+address, an **Actions** menu, and tabs: **Summary**, **Profile**, **General**,
+**AI**, **Meetings**, **Calling**, **Messaging**, **Hybrid Services**, **Devices**,
+and **Vidcast**.
 
-### Step 4 — Confirm the assigned services
+![User profile Summary tab showing name, Pending status, email address, the Actions button and the profile tabs](../../assets/images/webex-messaging-onboarding/04-user-profile-summary.png)
 
-Open the **Services** section.
+### Step 4 — Confirm the assigned licences
+
+On the **Summary** tab, scroll down to the **Licences** section.
+
+![Licences section of the user's Summary tab: Messaging – Basic messaging, Advanced messaging; Meeting – Basic space meetings; Calling – Call on Webex; with an Edit licences button](../../assets/images/webex-messaging-onboarding/04-user-licences.png)
 
 Confirm:
 
-| Service | Expected state |
+| Service | Expected licences |
 | --- | --- |
-| **Messaging** | Enabled / toggled on |
-| **Meetings** | Off |
-| **Calling** | Off |
+| **Messaging** | Basic messaging, **Advanced messaging** |
+| **Meeting** | Basic space meetings only (free) |
+| **Calling** | Call on Webex (1:1 call, non-PSTN) only (free) |
 
 !!! tip "Fixing it here"
-    This panel is also where you change a license after the fact. If Messaging is off,
-    turn it on and save — you do not need to delete and recreate the user. Likewise, if
-    an extra service was assigned by an automatic template, clear it here.
+    **Edit licences** is also where you change a license after the fact. If Advanced
+    messaging is missing, add it and save — you do not need to delete and recreate the
+    user. Likewise, if an extra paid licence was assigned, clear it here.
 
-### Step 5 — Note the activation email behaviour
+### Step 5 — Check the invitation email
 
-Whether the new user received a welcome/activation email depends on an
-organization-wide setting.
+Further down the **Summary** tab, the **Info** section shows **Last email status**.
 
-To check it, go to **Management > Organization Settings** and find the
-**Email** section, which controls whether automated welcome emails are suppressed.
+In testing, a freshly added user showed **Last email status: None** in Control Hub, yet
+the invitation email still arrived at `<new-user-email>` within a minute or two. Don't
+treat **None** as proof that nothing was sent — check the user's inbox.
 
-| Setting | What the user experiences |
+If the user doesn't receive an email, you have two options:
+
+| Option | What to do |
 | --- | --- |
-| Welcome emails **enabled** (default) | The user receives an activation email at `<new-user-email>`. |
-| Welcome emails **suppressed** | No email is sent. The user must be told to go to the Webex App and sign in with their address. |
+| Resend it | In **Management > Users**, click the **Resend Invitation** (envelope) icon on the user's row. |
+| Skip it | The user can go straight to [web.webex.com](https://web.webex.com) or the Webex App and sign in with their address. Webex emails them a confirmation code instead (Task 5). |
 
-Make a note of which case applies — Task 5 branches on it.
-
-!!! note "Why would anyone suppress the email?"
+!!! note "Why would an organization not email new users?"
     Large organizations often stage thousands of accounts weeks before go-live and do
     not want users activating early or filing help-desk tickets about an unexpected
     email. They send their own communication instead, on their own schedule.
@@ -79,9 +89,9 @@ Make a note of which case applies — Task 5 branches on it.
 
 - [ ] `<new-user-email>` is listed under **Management > Users**.
 - [ ] Their status is **Pending**.
-- [ ] Their **Services** show Messaging enabled.
-- [ ] No other service (Meetings, Calling) is enabled.
-- [ ] You know whether your organization sends welcome emails.
+- [ ] Their **Licences** section shows **Advanced messaging**.
+- [ ] No paid Meeting or Calling licence is assigned — only the free Basic entitlements.
+- [ ] You know whether the invitation email has arrived.
 
 ---
 

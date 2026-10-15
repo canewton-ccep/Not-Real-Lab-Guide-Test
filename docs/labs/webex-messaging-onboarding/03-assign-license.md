@@ -2,127 +2,125 @@
 
 <span class="task-badge">Task 3 of 7</span> &nbsp; **Estimated time:** 5 minutes
 
-A Webex user with no license can exist, but cannot do anything. This task grants the
-Messaging service, which is what makes the Webex App usable for chat, spaces, and file
-sharing.
+A Webex user with no license can exist, but cannot do anything useful. This task grants
+the Messaging service, which is what makes the Webex App usable for chat, spaces, and
+file sharing.
 
 ## Understand what you are granting
 
 | Service | What it enables | In this lab |
 | --- | --- | --- |
 | **Messaging** | Direct messages, spaces, file sharing, presence, whiteboards | :material-check: Required |
-| **Meetings** | Hosting scheduled and personal-room meetings | Not required |
+| **Meeting** | Hosting scheduled and personal-room meetings | Not required |
 | **Calling** | PSTN / cloud calling, phone number and extension | Not required |
-| **Contact Center**, **Hybrid Services**, others | Specialized workloads | Not required |
 
-!!! note "Messaging is often free of charge"
-    In many Webex subscriptions, Messaging is included for all users rather than drawn
-    from a counted pool. You still assign it explicitly — the service has to be on the
-    account for the Webex App to work.
+!!! note "Free *Basic* entitlements vs. paid licences"
+    Control Hub distinguishes two kinds of entitlement:
+
+    - **Basic** entitlements — **Basic messaging**, **Basic space meetings**, and
+      **Call on Webex (1:1 call, non-PSTN)** — are free, come from their own
+      no-cost subscriptions, and are not counted against your licence pool.
+    - **Paid / trial licences** — such as **Advanced messaging** — come from your
+      subscription and are counted (`1 of 30 assigned`).
+
+    In this lab you assign **Advanced messaging**, the counted Messaging licence you
+    checked in Task 1.
 
 ## Steps
 
 ### Step 1 — Read the licensing screen
 
-You are now on the screen where the wizard shows which services the new user will
-receive. What you see depends on one organization setting:
+You are now on **Step 2: Assign licences for users**. The left column lists the
+services — **Messaging**, **Meeting**, and **Calling** — and the right column shows the
+licences available for the selected service, grouped by subscription. The number badge
+next to each service shows how many licences are ticked for it.
 
-=== "Automatic license assignment is ON"
+![Assign licences step with the Messaging tab selected: Basic messaging is ticked, Advanced messaging (Enterprise trial, 1 of 30 assigned) is not](../../assets/images/webex-messaging-onboarding/03-licences-default-messaging.png)
 
-    Control Hub displays the template of services this user will get automatically,
-    with no checkboxes to change. Continue to Step 2 to override it.
+By default, Control Hub pre-ticks the free Basic entitlements for every service:
+**Basic messaging**, **Basic space meetings**, and **Call on Webex**.
 
-=== "Automatic license assignment is OFF"
+!!! note "Where do the defaults come from?"
+    The defaults are controlled by the organization's licence-assignment template under
+    **Management > Users > Licences**. In a new organization it reads *"Basic licences
+    will be automatically assigned until you set up your organisation-based
+    licences."* Organization-based and group-based templates are convenient in
+    production; this lab leaves them unconfigured and chooses licences by hand.
 
-    Control Hub displays a list of services with checkboxes, ready for you to pick.
-    Skip to Step 3.
+    ![Users > Licences page showing Organisation-based licences (not set up) and Group-based licences](../../assets/images/webex-messaging-onboarding/03-licence-assignment-settings.png)
 
-!!! note "What is automatic license assignment?"
-    An organization-wide template that grants a standard set of services to every new
-    user, so admins don't have to think about it per person. It is configured under
-    **Management > Users > Licenses** (or **Account > Licenses**, depending on
-    release). It is convenient in production and inconvenient in a lab, which is why
-    you override it here.
+### Step 2 — Choose the subscription
 
-### Step 2 — Override the automatic assignment
+Each licence is listed under the subscription it comes from — for example
+**Subscription: Enterprise trial - 10/15/2026**. If your organization has more than one
+paid subscription, pick the licence from the subscription you confirmed had free
+licences in Task 1.
 
-Click **Assign license manually**.
+### Step 3 — Select Advanced messaging
 
-The screen switches to the per-service checkbox view described in the second tab above.
+With **Messaging** selected in the left column, tick **Advanced messaging**.
 
-### Step 3 — Choose the subscription
+Control Hub locks the Basic entitlements on (they turn grey and cannot be cleared) and
+the **Messaging** badge changes to **2**.
 
-If your organization has more than one subscription, a selector appears. Choose the
-subscription you confirmed had free licenses in Task 1.
+![Messaging tab with Advanced messaging ticked and Basic messaging greyed out and locked on](../../assets/images/webex-messaging-onboarding/03-licences-advanced-messaging-selected.png)
 
-If you only have one subscription, no selector appears. Continue.
+### Step 4 — Leave Meeting and Calling at their defaults
 
-### Step 4 — Select Messaging
+Click **Meeting** and **Calling** in the left column to look at them, but do not tick
+any of the paid licences there (**Advanced space meetings**, **Webex Meetings Suite**,
+**Webex Calling – Professional**, and so on).
 
-Select the checkbox for **Messaging**.
+![Meeting tab: Basic space meetings is ticked; the Enterprise trial meeting licences are unticked](../../assets/images/webex-messaging-onboarding/03-licences-default-meeting.png)
 
-Leave **Meetings**, **Calling**, and every other service **unselected**.
+The free **Basic space meetings** and **Call on Webex** entitlements stay ticked and
+locked. That is expected — they are included with any paid licence and cost nothing.
 
 !!! warning "Resist the urge to tick everything"
-    Assigning Meetings or Calling here consumes additional licenses from your
-    subscription and adds configuration screens (such as location and phone number)
-    that this lab does not cover. Messaging only.
+    Ticking Meeting or Calling licences here consumes additional licences from your
+    subscription and, for Calling, adds configuration (such as location and phone
+    number) that this lab does not cover. Advanced messaging only.
 
-### Step 5 — Skip the conditional screens
+Click **Next**.
 
-Depending on what you selected and how your organization is configured, the wizard may
-present extra screens. Handle them as follows:
+### Step 5 — Review
 
-| Screen | What to do |
-| --- | --- |
-| **Calling location / phone number** | Should not appear. If it does, go back and clear the Calling checkbox. |
-| **Tracking codes** | Applies only to Meeting licenses. Should not appear. |
-| **Content management** | If it appears, accept the default and click **Next**. |
-
-Click **Next** until you reach the review screen.
-
-### Step 6 — Review
-
-The review screen lists each user you are about to add and the services each one will
+**Step 3: Review** lists each user you are about to add and the licences each one will
 receive.
+
+![Review step showing one added user and the assigned licences: Messaging – Basic messaging and Advanced messaging; Meeting – Basic space meetings; Calling – Call on Webex](../../assets/images/webex-messaging-onboarding/03-review.png)
 
 Confirm:
 
-- Exactly one user is listed.
+- **Added user(1)** — exactly one user is listed.
 - The email address is `<new-user-email>`, spelled correctly.
-- The services column shows **Messaging** and nothing else.
+- **Assigned licenses** shows **Messaging: Basic messaging, Advanced messaging**,
+  and only the free Basic entitlements for Meeting and Calling.
 
-!!! warning "Last chance to fix a typo"
+!!! tip "Last chance to fix a typo"
     After submission, correcting a misspelled email address means deleting the user and
-    starting over — the email address is the account's identity and cannot be edited
-    freely.
+    starting over. Use **Previous** to go back now if anything is wrong.
 
-### Step 7 — Submit
+### Step 6 — Submit
 
-Click **Add Users**.
+Click **Add users**.
 
-Control Hub processes the list and shows a summary of how many records succeeded and
-how many failed.
+Control Hub creates the account and shows a confirmation reading `1 users added`.
 
-### Step 8 — Finish
+![Confirmation screen reading 1 users added, with a Close button](../../assets/images/webex-messaging-onboarding/03-users-added.png)
 
-Review the summary. It should report **1 record processed** with no errors.
+### Step 7 — Close the wizard
 
-Click **Finish**.
-
-!!! note "When is the license actually consumed?"
-    Creating the user does not draw the license down. The license is taken from your
-    subscription the **first time the user signs in to Webex** — which happens in
-    Task 5.
+Click **Close**. You return to the user list.
 
 ## :material-check-circle: Verify your work
 
-- [ ] The review screen showed exactly one user with the Messaging service.
-- [ ] You clicked **Add Users** and the summary reported no errors.
-- [ ] You clicked **Finish** and returned to the user list.
+- [ ] The review screen showed exactly one user with **Advanced messaging**.
+- [ ] You clicked **Add users** and saw `1 users added`.
+- [ ] You clicked **Close** and returned to the user list.
 - [ ] `<new-user-email>` now appears in the **Management > Users** table.
 
-If the summary reported an error instead, see
+If Control Hub reported an error instead, see
 [Troubleshooting](troubleshooting.md#email-already-exists).
 
 ---

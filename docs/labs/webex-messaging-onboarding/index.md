@@ -27,7 +27,7 @@ After completing this lab, you will be able to:
 1. Sign in to Control Hub and locate the user management area.
 2. Add a user to a Webex organization manually.
 3. Assign and verify a Webex Messaging license.
-4. Explain what the **Pending** user status means and when a license is consumed.
+4. Explain what the **Pending** user status means and how it becomes **Active**.
 5. Activate a new Webex account and sign in to the Webex App.
 6. Start a direct message, create a space, and exchange messages.
 7. Remove a user or reclaim a license when the user leaves.
@@ -62,5 +62,5 @@ If something goes wrong, jump to [Troubleshooting](troubleshooting.md).
 
 !!! warning "Licenses are real"
     If you run this lab in a production organization, the Messaging license you assign
-    is consumed from your real subscription the first time the new user signs in.
+    is counted against your real subscription.
     [Task 7](07-cleanup.md) shows you how to give it back.

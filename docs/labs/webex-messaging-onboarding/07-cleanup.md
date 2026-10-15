@@ -2,7 +2,7 @@
 
 <span class="task-badge">Task 7 of 7</span> &nbsp; **Estimated time:** 5 minutes
 
-The lab user is now consuming a Messaging license. This task shows you the two ways to
+The lab user is now consuming a Messaging license. This task shows you the ways to
 give it back — which is also exactly what you do in production when somebody changes
 role or leaves the company.
 
@@ -14,12 +14,13 @@ role or leaves the company.
 
 | Approach | What happens to the account | What happens to their messages | Use it when |
 | --- | --- | --- | --- |
-| **A. Remove the license** | Account stays, can still sign in but cannot message | Retained | The person is staying but changing role |
-| **B. Delete the user** | Account removed from the organization | Removed from the organization's control | The person has left, or this was a lab account |
+| **A. Remove the license** | Account stays, keeps only the free Basic entitlements | Retained | The person is staying but changing role |
+| **B. Suspend the user** | Account stays but the person cannot sign in | Retained | The person is leaving, but you must keep their data for now |
+| **C. Delete the user** | Account removed from the organization | Removed from the organization's control | The person has left, or this was a lab account |
 
-For a lab account you created only to practise, **B** is the tidy choice.
+For a lab account you created only to practise, **C** is the tidy choice.
 
-## Approach A — Remove the Messaging license
+## Approach A — Remove the Advanced messaging license
 
 ### Step 1
 
@@ -27,26 +28,34 @@ In Control Hub, go to **Management > Users** and click the lab user.
 
 ### Step 2
 
-Open the **Services** (or **Licenses**) section.
+On the **Summary** tab, scroll to **Licences** and click **Edit licences**.
+
+An **Edit services** page opens with a read-only summary. Click **Edit licences** at
+the bottom right to switch to the editable view.
 
 ### Step 3
 
-Clear the **Messaging** checkbox or toggle it off.
+With **Messaging** selected on the left, clear the **Advanced messaging** checkbox.
+
+![Edit services page with the Messaging tab selected, Basic messaging locked on and Advanced messaging (2 of 30 assigned) ticked, with Cancel and Save buttons](../../assets/images/webex-messaging-onboarding/07-edit-licences.png)
+
+The free **Basic messaging** entitlement stays — the user can still do basic messaging,
+but no longer holds a counted licence.
 
 ### Step 4
 
-Save your change.
-
-### Step 5
-
-Switch to **Window A**, where the new user is signed in. Within a few minutes the app
-loses access to messaging features. Signing out and back in makes the change immediate.
+Click **Save**.
 
 !!! note "The license returns to the pool"
-    Check **Management > Subscriptions**. The assigned count for Messaging has dropped
-    by one and the license is available to assign to somebody else.
+    Check **Account > Subscriptions**. The assigned count for **Advanced messaging** has
+    dropped by one and the license is available to assign to somebody else.
 
-## Approach B — Delete the user
+## Approach B — Suspend the user
+
+In the user's profile, click **Actions** (top right) and choose **Suspend**. The account
+and its data stay in place, but the person can no longer sign in.
+
+## Approach C — Delete the user
 
 !!! warning "This is not reversible"
     Deleting a user removes their account from your organization. Their messages and
@@ -55,31 +64,32 @@ loses access to messaging features. Signing out and back in makes the change imm
     creates a new, empty account.
 
     In production, confirm your organization's data-retention and legal-hold
-    obligations before deleting anyone. Many organizations deactivate rather than
-    delete for this reason.
+    obligations before deleting anyone. Many organizations suspend rather than delete
+    for this reason.
 
 ### Step 1
 
-In Control Hub, go to **Management > Users**.
+In Control Hub, go to **Management > Users** and click the lab user to open their
+profile.
 
 ### Step 2
 
-Click the lab user to open their profile.
+Click **Actions** at the top right of the profile and choose **Delete User**.
+
+![The Actions menu on the user's profile showing Request password reset, Suspend and Delete User](../../assets/images/webex-messaging-onboarding/07-actions-menu.png)
 
 ### Step 3
 
-Find the delete option — typically **Delete User** at the bottom of the profile, or
-under an **Action** / **…** menu on the user's row.
+Control Hub asks *"Are you sure you want to delete `<new-user-email>`?"* Click
+**Delete User** to confirm.
+
+![Delete user? confirmation dialog with Cancel and Delete User buttons](../../assets/images/webex-messaging-onboarding/07-delete-confirm.png)
 
 ### Step 4
 
-Confirm the deletion. Control Hub asks you to confirm because the action is permanent.
-
-### Step 5
-
 Verify the user no longer appears in the user list, and that
-**Management > Subscriptions** shows the Messaging license returned to the available
-pool.
+**Account > Subscriptions** shows the **Advanced messaging** license returned to the
+available pool.
 
 ## Optional — Clean up the space
 
@@ -95,9 +105,9 @@ choose **Leave space**.
 
 ## :material-check-circle: Verify your work
 
-- [ ] You chose and completed either Approach A or Approach B (or deliberately skipped both).
-- [ ] **Management > Subscriptions** reflects the license change.
-- [ ] You understand the difference between removing a license and deleting a user.
+- [ ] You chose and completed Approach A, B, or C (or deliberately skipped all three).
+- [ ] **Account > Subscriptions** reflects the license change.
+- [ ] You understand the difference between removing a license, suspending a user, and deleting a user.
 
 ---
 
@@ -107,18 +117,18 @@ You can now:
 
 - Add a user to a Webex organization manually in Control Hub
 - Assign and verify a Webex Messaging license
-- Explain the Pending-to-Active lifecycle and when a license is consumed
+- Explain the Pending-to-Active lifecycle
 - Activate a new account and sign in to the Webex App
 - Exchange direct messages, use Messaging features, and create a space
-- Reclaim a license or remove a user
+- Reclaim a license, suspend a user, or remove a user
 
 ### Where to go next
 
-- **Add Meetings.** Repeat Task 3 for the same user with the Meetings service, then
+- **Add Meetings.** Repeat Task 3 for the same user with a Meeting licence, then
   schedule and join a meeting.
 - **Add Calling.** Assign a Webex Calling license, which introduces locations, phone
   numbers, and extensions.
-- **Scale it up.** Instead of the manual wizard, use the bulk CSV template in
+- **Scale it up.** Instead of the manual wizard, use the bulk CSV option in
   **Management > Users** to add and license dozens of users at once.
 - **Automate it.** The same operation is available over the
   [Webex People API](https://developer.webex.com/docs/api/v1/people), which is how

@@ -11,8 +11,8 @@ synchronizes users from an external directory.
 
 1. Confirm your role. In **Management > Users**, find your own account — your role is
    shown on your profile. A read-only administrator cannot create users.
-2. Check for directory synchronization under **Management > Organization Settings** or
-   the Directory Connector / identity section. If synchronization is active, create the
+2. Check for directory synchronization under **Management > Organisation settings**
+   (look for **Cisco Directory Connector** and the identity-provider settings). If synchronization is active, create the
    user in Active Directory (or your cloud identity provider) and let it sync; Control
    Hub will not let you add people manually.
 3. If you purchased through Webex Online (`my.webex.com`), users are managed in **Webex
@@ -33,20 +33,26 @@ organization, or a free/trial account the person signed up for themselves.
 
 ## No activation email arrived {#no-activation-email}
 
-**Cause, most to least likely.** Spam filtering; welcome emails suppressed at the
-organization level; a mail gateway rejecting the plus-address; genuine delay.
+**Cause, most to least likely.** Spam filtering; a mail gateway rejecting the
+plus-address; genuine delay; the organization's own onboarding process holding the
+email back.
 
 **Fix.**
 
 1. Check the junk/spam folder.
 2. Confirm your plus-address actually delivers — send yourself a plain test message to
    it.
-3. Check **Management > Organization Settings > Email** to see whether automated
-   welcome emails are suppressed.
-4. Resend the invitation from the user's profile in Control Hub.
-5. **Skip the email.** It is a convenience. Go to [web.webex.com](https://web.webex.com),
-   enter the user's address, and sign in or use the password-reset flow to set a
-   password. This works whether or not the email ever arrives.
+3. Resend the invitation: in **Management > Users**, click the **Resend Invitation**
+   (envelope) icon on the user's row.
+4. **Skip the email.** It is a convenience. Go to [web.webex.com](https://web.webex.com),
+   click **Sign in**, and enter the user's address. Webex emails a six-digit
+   confirmation code and then asks the user to create a password. This works whether
+   or not the invitation email ever arrives.
+
+!!! note "Last email status: None"
+    The **Info** section of the user's profile can show **Last email status: None**
+    even after the invitation has been delivered. Check the inbox rather than relying
+    on that field.
 
 ## The new user's status stays "Pending" {#status-stays-pending}
 
@@ -62,8 +68,9 @@ stale entitlement.
 
 **Fix.**
 
-1. In Control Hub, open the user's **Services** and confirm Messaging is on. Turn it on
-   and save if not.
+1. In Control Hub, open the user's profile, scroll to **Licences** on the **Summary**
+   tab, and confirm **Advanced messaging** is listed. If not, click **Edit licences**,
+   add it, and save.
 2. In the Webex App, sign out completely and sign back in. Entitlement changes are
    picked up at sign-in.
 3. If it is still missing after ten minutes, restart the app.
@@ -87,7 +94,8 @@ isn't licensed for Messaging; or you are typing a display name that doesn't matc
 1. Type the **full email address** rather than a name. Directory search on partial
    names can miss.
 2. Confirm both accounts appear in the same organization's **Management > Users** list.
-3. Confirm both accounts have Messaging enabled under **Services**.
+3. Confirm both accounts have a Messaging licence in the **Licences** section of their
+   profile.
 4. Note that you *can* message people outside your organization in Webex, but only by
    their full email address — partial-name search will not find them.
 

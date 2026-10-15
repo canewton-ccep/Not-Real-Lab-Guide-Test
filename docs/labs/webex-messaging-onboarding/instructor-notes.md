@@ -35,7 +35,9 @@ though nothing here is confidential.
 | --- | --- | --- |
 | Same-browser sessions | Learner activates the new user in the browser where they're already signed in as admin and gets confused about identity | Say it out loud at the start of Task 5. Have them open a private window *before* they need it. |
 | Activation email in spam | Five minutes lost per learner | Tell everyone to open their junk folder preemptively while the email sends. |
-| Welcome emails suppressed | No email ever arrives | Check this organization setting yourself before the session. |
+| Invitation email doesn't arrive | Learner is stuck at Task 5 Step 1 | Tell them to sign in at web.webex.com with the address anyway — Webex emails a confirmation code instead. |
+| "Last email status: None" in Control Hub | Learner thinks no invitation was sent | The field can lag behind delivery; have them check the inbox. |
+| Basic entitlements look like extra licences | Learner tries to untick Basic space meetings / Call on Webex | They are free and locked on once a paid licence is ticked. Explain the Basic vs. paid split from Task 3. |
 | Control Hub label drift | Steps say **Management > Users**, the console says something slightly different | The lab already notes this. Reinforce it verbally. |
 | Admin account unlicensed for Messaging | Task 6 cannot be completed | Verify your own demo account before the session. |
 
@@ -43,10 +45,10 @@ though nothing here is confidential.
 
 Use these to turn the clicking into understanding.
 
-- *Why does Webex wait until first sign-in to consume the license?* (Lets admins stage
-  thousands of accounts ahead of go-live without paying for them.)
-- *When would you suppress welcome emails?* (Phased rollouts, staged migrations, a
-  communication plan owned by somebody other than IT.)
+- *Why are Basic messaging, Basic space meetings and Call on Webex always assigned?*
+  (They are free entitlements; the paid licence layers on top of them.)
+- *When would you not want Webex to email new users directly?* (Phased rollouts,
+  staged migrations, a communication plan owned by somebody other than IT.)
 - *Why would you remove a license instead of deleting a user?* (Retention, legal hold,
   role change, re-hire.)
 - *At what organization size does this manual flow stop being viable?* (Leads naturally

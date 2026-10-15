@@ -58,13 +58,22 @@ https://admin.webex.com
 Enter `<admin-email>`, click **Sign In**, and complete your organization's
 authentication (password, SSO, and/or multi-factor prompt).
 
+!!! note "First sign-in to a new organization"
+    The first time anyone signs in to a brand-new organization, Control Hub may show a
+    **Review our Terms of Service** dialog, a **Review your organisation profile** form,
+    and a cookie banner. Accept the terms (you cannot continue without them). The
+    profile form can be closed with **X** and completed later.
+
 ### Step 3 — Confirm you landed in the right organization
 
-Look at the **top-right corner** of Control Hub. It shows the name of the organization
-you are managing.
+Look at the **bottom of the left navigation**. It shows the name of the organization
+you are managing (`messaginglab` in the screenshots in this lab).
 
-If you administer more than one organization, click the organization name and switch to
-the one you intend to use for this lab.
+![Control Hub Overview page with the expanded left navigation; the organization name appears at the bottom of the navigation](../../assets/images/webex-messaging-onboarding/01-control-hub-overview.png)
+
+If the navigation is collapsed to icons, click the **≡** menu at the top left to expand
+it. If you administer more than one organization, click the organization name and
+switch to the one you intend to use for this lab.
 
 !!! warning "Check this twice"
     Everything you do in the next six tasks happens in whichever organization is
@@ -73,19 +82,20 @@ the one you intend to use for this lab.
 
 ### Step 4 — Confirm you have a free Messaging license
 
-1. In the left navigation, expand **Management** and click **Users**.
+1. In the left navigation, under **Management**, click **Users**. You see the user
+   list with tabs for **Users**, **Licences**, **Contacts**, and **Admin roles**.
 
-    !!! note "Navigation differs slightly by release"
-        Depending on which Control Hub release your organization is on, the user list
-        is either directly under **Users** in the left navigation, or under
-        **Management > Users**. Both lead to the same place. This lab writes it as
-        **Management > Users**; use whichever your console shows.
+    ![Control Hub Users page showing the user list and the Users, Licences, Contacts and Admin roles tabs](../../assets/images/webex-messaging-onboarding/01-users-list.png)
 
-2. In the left navigation, click **Subscriptions** (under **Management**, or in the
-   **Account** section depending on your release).
-3. Find your Webex subscription and locate the **Webex Messaging** (sometimes shown as
-   **Messaging**) license line.
-4. Compare **assigned** against **purchased**. You need at least one unassigned license.
+2. In the left navigation, under **Management**, click **Account**, then the
+   **Subscriptions** tab.
+3. The **Licence Summary** lists every licence across your subscriptions. Find the
+   **Messaging** row — in a trial organization the licence is called
+   **Advanced messaging**.
+4. Read the **Assigned** column, shown as *assigned / total* (for example `1/30`). You
+   need at least one unassigned license.
+
+![Account > Subscriptions > Licence Summary showing Messaging – Advanced messaging with 1/30 assigned](../../assets/images/webex-messaging-onboarding/01-subscriptions-licence-summary.png)
 
 !!! note "Trial and sandbox organizations"
     Trials and developer sandboxes typically include a generous block of Messaging
@@ -96,9 +106,9 @@ the one you intend to use for this lab.
 Do not continue until all of these are true.
 
 - [ ] You are signed in at `admin.webex.com`.
-- [ ] The organization name in the top-right corner is the organization you intend to use.
+- [ ] The organization name at the bottom of the left navigation is the organization you intend to use.
 - [ ] You can open **Management > Users** and see the existing user list.
-- [ ] Your subscription shows at least one available Webex Messaging license.
+- [ ] **Account > Subscriptions** shows at least one available Webex Messaging license.
 - [ ] You have written down `<new-user-email>` and can read mail delivered to it.
 
 ---

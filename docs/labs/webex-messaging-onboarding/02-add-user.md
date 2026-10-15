@@ -2,8 +2,8 @@
 
 <span class="task-badge">Task 2 of 7</span> &nbsp; **Estimated time:** 5 minutes
 
-Now you create the account. Control Hub walks you through a short wizard: identify the
-user, assign services, review, and submit.
+Now you create the account. Control Hub walks you through a three-step wizard —
+**Basic information**, **Assign licences**, and **Review** — then adds the user.
 
 !!! note "Can I add users manually?"
     Manual user creation is available when your organization is **not** synchronizing
@@ -18,23 +18,31 @@ user, assign services, review, and submit.
 
 In Control Hub, go to **Management > Users**.
 
-You see a table of everyone currently in the organization, with columns for name,
-email/ID, status, and administrator role.
+You see a table of everyone currently in the organization, with columns for display
+name, email, status, and last active time. The **Add users** button is at the right,
+above the table.
 
-### Step 2 — Start the Add user wizard
+![Users list with the Add users button at the right of the search and filter bar](../../assets/images/webex-messaging-onboarding/02-users-add-users-button.png)
 
-Click **Add user**.
+!!! tip "Can't see Add users?"
+    In a narrow browser window the expanded left navigation can push **Add users** off
+    the right edge of the page. Collapse the navigation with the **≡** menu, or widen
+    the window.
 
-!!! note
-    Some releases present this as **Manage users**, which then offers **Manually add
-    users** alongside CSV import and directory synchronization. If you see that
-    intermediate screen, choose **Manually add users**.
+### Step 2 — Start the Add users wizard
+
+Click **Add users**.
+
+The **Manually add users** wizard opens at **Step 1: Basic information**.
 
 ### Step 3 — Choose how to identify the user
 
-The wizard asks how you want to enter people. Choose:
+The wizard asks how you want to enter people. Make sure this option is selected (it is
+the default):
 
 **Names and Email address**
+
+![Manually add users wizard, Step 1: Basic information, with Names and Email address selected](../../assets/images/webex-messaging-onboarding/02-wizard-basic-information.png)
 
 !!! tip "Why not email-only?"
     **Email address** is the fastest option and lets you paste a comma-separated list
@@ -52,34 +60,40 @@ Fill in the three fields with the values you wrote down in Task 1:
 | Last name | `<new-user-last>` |
 | Email address | `<new-user-email>` |
 
-Then click the **+** (add) control to commit the entry to the list below the form.
+![First name, Last name and Email address fields filled in, with the + button at the end of the row](../../assets/images/webex-messaging-onboarding/02-wizard-details-entered.png)
 
-!!! warning "The row must appear in the list"
-    If you type the details and click **Next** without clicking **+**, some releases
-    silently drop the entry and you end up adding nobody. Confirm the person now
-    appears as a row before you continue.
+Then click the **+** button at the end of the row to commit the entry.
+
+The person appears as a chip in the list box below the form, and the counter under it
+reads `1/25 items`.
+
+![The new user shown as a chip in the list below the form, with the counter reading 1/25 items](../../assets/images/webex-messaging-onboarding/02-wizard-user-added-to-list.png)
+
+!!! warning "The chip must appear in the list"
+    **Next** stays disabled until at least one person has been added to the list. If
+    **Next** is greyed out, you typed the details but did not click **+**.
 
 ### Step 5 — Continue to licensing
 
 Click **Next**.
 
 !!! note "Batch limits"
-    You can add up to **25 users at a time** this way. If your organization has marked
-    any user attribute as required, the limit drops to **1 user at a time**. One user is
-    all this lab needs either way.
+    You can add up to **25 users at a time** this way — that is what the `1/25 items`
+    counter tracks. If your organization has marked any user attribute as required, the
+    limit drops to **1 user at a time**. One user is all this lab needs either way.
 
 ## What just happened
 
 Nothing yet — the wizard has only collected your input. The account is not created, and
 no license is touched, until you finish the review step in Task 3. You can still cancel
-safely at this point.
+safely at this point by closing the wizard with **X**.
 
 ## :material-check-circle: Verify your work
 
-- [ ] You are in the **Add user** wizard.
-- [ ] `<new-user-email>` appears as a row in the list of users to add.
-- [ ] The first and last name shown match what you intended.
-- [ ] You clicked **Next** and are now on a screen about services or licenses.
+- [ ] You are in the **Manually add users** wizard.
+- [ ] `<new-user-email>` appears as a chip in the list of users to add.
+- [ ] The first and last name shown in the chip match what you intended.
+- [ ] You clicked **Next** and are now on **Step 2: Assign licences for users**.
 
 ---
 
